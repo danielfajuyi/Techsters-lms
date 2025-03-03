@@ -1,11 +1,11 @@
 import React from "react";
 
-const Rating = () => {
+const Navbar = () => {
   return (
     <div>
-      <h1>Rating</h1>
+      <h1>Navbar</h1>
     </div>
   );
 };
 
-export default Rating;
+export default Navbar;
