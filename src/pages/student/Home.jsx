@@ -1,11 +1,11 @@
 import React from "react";
 
-const Rating = () => {
+const Home = () => {
   return (
     <div>
-      <h1>Rating</h1>
+      <h1>Home Page</h1>
     </div>
   );
 };
 
-export default Rating;
+export default Home;
