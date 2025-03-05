@@ -1,5 +1,6 @@
 import React from "react";
 import { assets } from "../../assets/assets";
+import SearchBar from "./SearchBar";
 
 const Hero = () => {
   return (
@@ -23,6 +24,7 @@ const Hero = () => {
         We bring together world-class instructors, interative content, and a
         supportive community to help you acheive your professional goals
       </p>
+      <SearchBar />
     </div>
   );
 };
