@@ -28,9 +28,9 @@ const Navbar = () => {
                   navigate("/educator");
                 }}
               >
-                {isEducator ? "Educator Dashboard" : "Become Educator|"}
+                {isEducator ? "Educator Dashboard |  " : "Become Educator|"}
               </button>
-              <Link to="/my-enrollments">My Enrollments</Link>
+              <Link to="/my-enrollments"> My Enrollments</Link>
             </>
           )}
         </div>
