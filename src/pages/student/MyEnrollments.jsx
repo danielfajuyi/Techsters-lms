@@ -1,11 +1,11 @@
 import React, { useContext, useState } from "react";
 import { AppContext } from "../../context/AppContext";
-import {Line} from 'rc-progress'
+import { Line } from "rc-progress";
 import Footer from "../../components/student/Footer";
 
 const MyEnrollments = () => {
-
-  const { enrolledCourses, calcualteCourseDuration, navigate } = useContext(AppContext);
+  const { enrolledCourses, calcualteCourseDuration, navigate } =
+    useContext(AppContext);
   const [progressArray, setProgressArray] = useState([
     { lectureCompleted: 2, totalLecture: 4 },
     { lectureCompleted: 1, totalLecture: 5 },
@@ -46,7 +46,16 @@ const MyEnrollments = () => {
                   />
                   <div className="flex-1">
                     <p className="mb-1 max-sm:text-sm">{course.courseTitle}</p>
-                    <Line strokeWidth={2} percent={progressArray[index] ? (progressArray[index].lectureCompleted * 100) / progressArray[index].totalLecture : 0  }  className="bg-gray-300 rounded full"/>
+                    <Line
+                      strokeWidth={2}
+                      percent={
+                        progressArray[index]
+                          ? (progressArray[index].lectureCompleted * 100) /
+                            progressArray[index].totalLecture
+                          : 0
+                      }
+                      className="bg-gray-300 rounded full"
+                    />
                   </div>
                 </td>
                 <td className="px-4 py-3 max-sm:hidden">
@@ -58,11 +67,16 @@ const MyEnrollments = () => {
                   <span>Lectures</span>
                 </td>
                 <td className="px-4 py-3 max-sm: text-right">
-                  <button onClick={()=> navigate('/player/' + course._id)} className="px-3 sm:px-5 py-1.5 sm:py-2 bg-blue-600 max-sm:text-xs text-white">
+                  <button
+                    onClick={() => navigate("/player/" + course._id)}
+                    className="px-3 sm:px-5 py-1.5 sm:py-2 bg-blue-600 max-sm:text-xs text-white"
+                  >
                     {progressArray[index] &&
-                      progressArray[index].lectureCompleted /
-                        progressArray[index].totalLecture === 1 ? 'Completed' : 'On going'}
-                 
+                    progressArray[index].lectureCompleted /
+                      progressArray[index].totalLecture ===
+                      1
+                      ? "Completed"
+                      : "On going"}
                   </button>
                 </td>
               </tr>
